@@ -1,4 +1,4 @@
-
+// Day 1
   const doorToDoor = (volunteers, neighbourhoods) => {
     // Code here!
     n_neighborhoods = neighbourhoods.length/volunteers.length
@@ -6,11 +6,9 @@
     // Remember to return a value
     return  n_neighborhoods
 
-    // Want to see what's going on inside your function? You can use console.log() to debug and print variables to the console below.
-
   }
   
-  
+// Day 2 
 const interviewAnswer = (topic) => {
   // Code here!
   var answer = "";
@@ -32,6 +30,7 @@ const interviewAnswer = (topic) => {
   return answer
 }
 
+//Day 3
 const castVote = (name, votes) => {
   // Code here!
   // var votes=[0,0,0];
@@ -52,7 +51,7 @@ const castVote = (name, votes) => {
   return votes;
 }
 
-
+//Day 4
 const registerToVote = (name, unregisteredVoters) => {
   // Code here!
   if (unregisteredVoters.includes(name)) {
@@ -61,7 +60,6 @@ const registerToVote = (name, unregisteredVoters) => {
     
   }
 
-  
-  // Remember to return a value!
+ // Remember to return a value!
   return unregisteredVoters
 }
