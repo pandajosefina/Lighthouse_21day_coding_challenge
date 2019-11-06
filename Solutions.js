@@ -63,3 +63,22 @@ const registerToVote = (name, unregisteredVoters) => {
  // Remember to return a value!
   return unregisteredVoters
 }
+
+//Day 5
+
+const chooseStations = (stations) => {
+  
+  // Code here!
+  
+var filtered = [];
+
+for (var i = 0; i < stations.length ; i++) {
+    if (stations[i][1] >=20 && (stations[i][2] == "school"||stations[i][2] == "community centre")) {
+        filtered.push(stations[i][0]);
+    }
+}
+
+  // Remember to return a value!
+  return filtered;
+
+}
