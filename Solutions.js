@@ -52,13 +52,13 @@ const castVote = (name, votes) => {
 }
 
 //Day 4
+
 const registerToVote = (name, unregisteredVoters) => {
   // Code here!
-  if (unregisteredVoters.includes(name)) {
-      var n = unregisteredVoters.indexOf(name);
-      unregisteredVoters.splice(n,1)
-    
-  }
+
+  // Remember to return a value!
+  return unregisteredVoters.filter(voter=> voter!= name)
+}
 
  // Remember to return a value!
   return unregisteredVoters
