@@ -82,3 +82,17 @@ for (var i = 0; i < stations.length ; i++) {
   return filtered;
 
 }
+
+// Day 6
+const voterTurnout = (voter_signatures, voter_ids) => {
+  // Code here!
+  if (voter_signatures.length != voter_ids.length) 
+    return false;
+    for (var i = voter_signatures.length; i--;) {
+      if (voter_signatures[i] != voter_ids[i]) {
+        return "FRAUD!";
+      }
+    }
+   return "All clear, we can count the votes!";
+}
+ 
