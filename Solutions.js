@@ -119,4 +119,12 @@ const termTopics = (interviews) => {
   return result;
 }
 
+// Day 8 
+
+const smartGarbage = (trash, bins) => {
+    // Code here!
+    bins[trash]++
+    return bins;
+}
+
  
