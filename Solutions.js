@@ -95,4 +95,28 @@ const voterTurnout = (voter_signatures, voter_ids) => {
     }
    return "All clear, we can count the votes!";
 }
+
+// Day 7
+
+const termTopics = (interviews) => {
+  // Code here!
+  var result = [0,0,0];
+  for (i=0; i < interviews.length; i++) {
+    switch(interviews[i]){
+      case "smart city":
+        result[0]++;
+      break;
+       case "arts funding":
+        result[1]++;
+      break;
+      case "transportation":
+        result[2]++;
+      break;
+    }  
+    
+  }  
+  // Remember to return an array!
+  return result;
+}
+
  
