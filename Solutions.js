@@ -127,4 +127,11 @@ const smartGarbage = (trash, bins) => {
     return bins;
 }
 
+// Day 9 
+const carPassing = (cars, speed) => {
+  // Code here!
+   cars.push({time:Date.now() , speed:speed});
+   return cars;
+  
+}
  
