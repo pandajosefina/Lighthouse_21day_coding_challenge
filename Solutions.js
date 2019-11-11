@@ -134,4 +134,49 @@ const carPassing = (cars, speed) => {
    return cars;
   
 }
- 
+
+// Day 10
+  
+  for (var i = 0; i < spots.length; i++) {
+    for (var j = 0 ; j < spots[i].length ; j++) {
+      // 'regular', 'small', or 'motorcycle'
+      var ve = vehicle.charAt(0).toUpperCase();
+      switch (ve) {
+        case 'R':
+          if (spots[i][j] == 'R') {
+            result.push(j,i);
+          }
+          break;
+        case 'S':
+          if (spots[i][j] == 'R' || spots[i][j] == 'S') {
+            result.push(j,i);
+          }
+          break;
+        case 'M':
+          if (spots[i][j] == 'R' || spots[i][j] == 'S' || spots[i][j] == 'M') {
+            result.push(j,i);
+          }
+         break;
+        }
+      }
+    }
+    
+  if (result.length ===0) {
+    return false; 
+  }
+  else {
+    return result.slice(0,2);
+   
+  }
+}
+
+
+// Day 11
+const busTimes = buses => {
+  // Code here!
+newobj = {};
+for (let key in buses) {
+  newobj[key] = buses[key].distance/buses[key].speed;
+}
+  return newobj;
+}
