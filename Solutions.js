@@ -180,3 +180,14 @@ for (let key in buses) {
 }
   return newobj;
 }
+
+// Day 12
+
+const checkAir = function (samples, threshold) {
+  // Code here!
+  var dirty = samples.filter(sample=> sample == 'dirty');
+  if (dirty.length/samples.length < threshold) {
+    return 'Clean';
+  }
+  else return 'Polluted';
+}
