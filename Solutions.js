@@ -191,3 +191,34 @@ const checkAir = function (samples, threshold) {
   }
   else return 'Polluted';
 }
+
+// Day 13
+
+const lightsOn = function(lights) {
+  // Code here!
+ lights.forEach(item => {
+        if (item.on === false) {
+          item.on = true;
+        }
+  });
+  return lights;
+}
+
+const lightsOff = function(lights) {
+    // Code here!
+  lights.forEach(item => {
+        if (item.on === true) {
+          item.on = false;
+        }
+  });
+  return lights;
+}
+
+const toggleLights = function(lights, lightsAreOn) {
+  // Code here!
+  if (lightsAreOn === true) {
+    lightsOff(lights);
+  }
+  else lightsOn(lights);
+  return lights;
+}
