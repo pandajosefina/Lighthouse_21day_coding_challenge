@@ -222,3 +222,34 @@ const toggleLights = function(lights, lightsAreOn) {
   else lightsOn(lights);
   return lights;
 }
+
+// Day 14
+
+const dynamicPricing = (numberOfPeople, distanceTraveled) => {
+  // Code here!
+  var price = 0;
+  if (numberOfPeople >= 30) {
+      price = 1 + 0.25*distanceTraveled +0.25;
+  }
+  else price = 1 + 0.25*distanceTraveled;
+  return "$" + price.toFixed(2);
+}
+
+
+// Day 15
+
+
+const finalPosition = (moves) => {
+  // Code here!
+
+var  x = moves.reduce(function(n, move) {
+    return n + ( move == 'east') - (move == 'west');
+}, 0);
+  
+var  y = moves.reduce(function(n, move) {
+    return n + ( move == 'north') - (move == 'south');
+}, 0);
+
+return [x,y];
+
+}
