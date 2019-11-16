@@ -225,6 +225,12 @@ const toggleLights = function(lights, lightsAreOn) {
 
 // Day 14
 
+const festivalColours = color1 => {
+  // code here!
+  var x = Math.abs(color1+150);
+  var y = Math.abs(color1+210); 
+  return [Math.min(x,y), Math.max(x,y)];
+}
 const dynamicPricing = (numberOfPeople, distanceTraveled) => {
   // Code here!
   var price = 0;
@@ -252,4 +258,13 @@ var  y = moves.reduce(function(n, move) {
 
 return [x,y];
 
+}
+
+// Day 16
+
+const festivalColours = color1 => {
+  // code here!
+  var x = Math.abs(color1+150);
+  var y = Math.abs(color1+210); 
+  return [Math.min(x,y), Math.max(x,y)];
 }
