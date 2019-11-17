@@ -268,3 +268,35 @@ const festivalColours = color1 => {
   var y = Math.abs(color1+210); 
   return [Math.min(x,y), Math.max(x,y)];
 }
+
+// Day 17
+
+const judgeVegetable = (vegetables, metric) => {
+  // Code here!
+  var red = vegetables[0].redness;
+  var rednam = vegetables[0].submitter;
+  var plum = vegetables[0].plumpness;
+  var plumnam = vegetables[0].submitter;
+
+  for (var i=0; i<vegetables.length; i++) {
+    if (red < vegetables[i].redness) {
+      red = vegetables[i].redness;
+      rednam = vegetables[i].submitter;
+    } 
+    if (plum < vegetables[i].redness) {
+      plum = vegetables[i].redness;
+      plumnam = vegetables[i].submitter;
+    } 
+    
+    
+  }
+   
+  if (metric === "redness") {
+    return rednam;
+  }
+  
+  if (metric === "plumpness") {
+    return plumnam;
+  }
+  
+}
