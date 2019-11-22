@@ -300,3 +300,120 @@ const judgeVegetable = (vegetables, metric) => {
   }
   
 }
+
+// Day 18
+
+const countTickets = (tickets) => {
+    // Code here!
+  var counter = {'red':0, 'green':0, 'blue':0};
+  
+  for (var i=0; i< tickets.length; i++) {
+    counter[tickets[i]]++;
+  }
+  
+  return counter;
+}
+
+const bestOdds = (tickets, raffleEntries) => {
+  // Code here!
+const counter = countTickets(tickets);
+var odds = {'red':0,'green':0,'blue':0};
+var odd = counter['red']/raffleEntries['red'];
+var raffle = 'red';
+
+if(Object.keys(raffleEntries).length) {
+    Object.keys(raffleEntries).forEach(key => {
+      odds[key] = counter[key]/raffleEntries[key]; 
+      if (odds[key] > odd) {
+        odd = odds[key];
+        raffle = key;
+      }
+    });
+}
+
+
+  return "You have the best odds of winning the " + raffle + " raffle."
+  
+}
+
+// Day 19
+
+const pumpkinSpice = money => {
+var left = money;
+var pie = 0 ; latte = 0; macaron = 0; spice = 0;
+
+console.log(money);
+
+while (left >= 5) {
+  pie = Math.floor(left/5);
+  left -= 5*pie;
+  spice += 30*pie;
+}
+  
+while (left >= 3) {
+  latte = Math.floor(left/3);
+  left -= 3*latte;
+  spice += 15*latte;
+}
+  
+  while (left >= 1) {
+      macaron = Math.floor(left);
+      console.log(macaron);
+      left -= macaron;
+      spice += 3*macaron;
+    }
+    
+  return [pie,latte,macaron,spice];
+  
+}
+
+// Day 20
+
+
+// Use the value below whenever you need the value of Pi
+
+const PI = 3.14159 
+
+const sphereVolume = function (radius) {
+    return 4/3*PI*radius**3;
+}
+
+const coneVolume = function (radius, height) {
+  return 1/3*PI*radius**2*height;
+}
+
+const prismVolume = function (height, width, depth) {
+  return height*width*depth;
+}
+
+
+const totalVolume = function (solids) {
+var total_vol=0;
+  for (i=0; i<solids.length; i++) {
+    if (solids[i].type == 'sphere') {
+      total_vol += sphereVolume(solids[i].radius);
+    }
+    
+    if (solids[i].type == 'cone') {
+      total_vol += coneVolume(solids[i].radius, solids[i].height);
+    }
+      
+     if (solids[i].type == 'prism') {
+      total_vol += prismVolume(solids[i].height,solids[i].width,solids[i].depth);
+    }
+  }
+  return total_vol;
+}
+
+// Day 21
+
+const chooseRecipe = function(bakeryA, bakeryB, recipes) {
+  // Code here!
+  const isinbakery = (ingredient) => bakeryA.includes(ingredient)||bakeryB.includes(ingredient);
+  for (i=0; i < recipes.length; i++) {
+    if (recipes[i].ingredients.every(isinbakery)){
+      return recipes[i].name;
+    }
+  }
+}
+   
